@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Tracking</title>
+<style>
+body{font-family:Inter,system-ui; background:#f3f4f6; display:flex; align-items:center; justify-content:center; height:100vh; margin:0;}
+.phone{width:360px;height:780px;background:white;border-radius:28px;box-shadow:0 10px 30px rgba(0,0,0,0.12);overflow:hidden;display:flex;flex-direction:column;}
+.header{padding:16px;background:linear-gradient(90deg,#0b63ff,#3aa0ff);color:white;font-weight:600;}
+.content{padding:16px;flex:1;}
+.map{height:360px;border-radius:12px;background:linear-gradient(180deg,#dbeafe,#bfdbfe);display:flex;align-items:center;justify-content:center;color:#1e3a8a;font-weight:600;margin-bottom:12px;}
+.card{background:#fff;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(10,10,10,0.04);}
+.small{font-size:12px;color:#6b7280;}
+.status{font-size:18px;font-weight:700;margin-top:8px;}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="header">Order Tracking</div>
+  <div class="content">
+    <div class="map">Live map — courier approaching: 4 min</div>
+    <div class="card">
+      <div class="small">Courier: Bob • Toyota Prius • 4.8 ★</div>
+      <div class="status">Arriving at pickup</div>
+      <div style="margin-top:8px;" class="small">Pickup: 123 Main St • Dropoff: 456 Oak Ave</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

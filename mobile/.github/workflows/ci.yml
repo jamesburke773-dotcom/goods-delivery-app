@@ -1,0 +1,21 @@
+name: Mobile CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Install mobile deps
+        working-directory: mobile
+        run: |
+          cd mobile
+          npm ci
+      - name: Run tests / lint (placeholder)
+        working-directory: mobile
+        run: echo "Add tests or Expo build steps here"

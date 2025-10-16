@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goods Delivery — Customer Preview</title>
+<style>
+body { font-family: Inter, system-ui, -apple-system, Arial; background:#f3f4f6; display:flex; align-items:center; justify-content:center; height:100vh; margin:0; }
+.phone { width:360px; height:780px; background:white; border-radius:28px; box-shadow:0 10px 30px rgba(0,0,0,0.12); overflow:hidden; display:flex; flex-direction:column;}
+.header { padding:16px; background:linear-gradient(90deg,#0b63ff,#3aa0ff); color:white; font-weight:600; }
+.content { padding:16px; flex:1; overflow:auto; }
+.card { background:#fff; border-radius:12px; padding:12px; box-shadow:0 6px 18px rgba(10,10,10,0.04); margin-bottom:12px; }
+.input { width:100%; padding:12px; border:1px solid #e5e7eb; border-radius:10px; margin-top:8px; }
+.button { display:block; width:100%; padding:12px; background:#ff7a18; color:white; border-radius:12px; text-align:center; margin-top:12px; text-decoration:none; font-weight:600; }
+.map { height:220px; border-radius:12px; background:linear-gradient(180deg,#dbeafe,#bfdbfe); display:flex; align-items:center; justify-content:center; color:#1e3a8a; font-weight:600; }
+.small { font-size:12px; color:#6b7280; }
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="header">Request Delivery</div>
+  <div class="content">
+    <div class="card">
+      <div class="small">Pickup</div>
+      <input class="input" placeholder="123 Main St, Apt 4B" />
+    </div>
+    <div class="card">
+      <div class="small">Dropoff</div>
+      <input class="input" placeholder="456 Oak Ave, Suite 2" />
+    </div>
+    <div class="card map">Map preview (courier ETA: 12 min)</div>
+    <a class="button" href="ordertracking.html">Request Delivery — $15.00</a>
+  </div>
+</div>
+</body>
+</html>
