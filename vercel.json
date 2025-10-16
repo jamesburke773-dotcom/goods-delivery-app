@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "goods-delivery-admin",
+  "builds": [
+    {
+      "src": "admin/package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "admin/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "admin/build" }
+    }
+  ],
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "admin/build/index.html" }
+  ]
+}
