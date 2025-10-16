@@ -1,0 +1,25 @@
+# Render Blueprint for Goods Delivery App
+# Defines backend (Node/Express) + PostgreSQL database
+
+services:
+  - type: web
+    name: goods-delivery-backend
+    env: node
+    plan: free
+    region: oregon  # or choose: frankfurt, singapore, etc.
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: goods-delivery-db
+          property: connectionString
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+
+databases:
+  - name: goods-delivery-db
+    plan: free
+    region: oregon
